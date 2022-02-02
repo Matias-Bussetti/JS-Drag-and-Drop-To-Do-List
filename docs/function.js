@@ -23,7 +23,11 @@ const saveInLocalStore = (storage, item) => {
   if (localStorage.getItem(storage) == null) {
     localStorage.setItem(storage, item);
   } else {
-    localStorage.setItem(storage, localStorage.getItem(storage) + "/" + item);
+    const saveString = localStorage.getItem(storage) + "/" + item;
+    localStorage.setItem(
+      storage,
+      saveString.slice(0, 1) !== "/" ? saveString : saveString.slice(1)
+    );
   }
 };
 
