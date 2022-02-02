@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM List</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./function.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+
+        <h1 id="title">GYM SCHEDULE</h1>
+
+        <div id="container-exercices">
+
+            <div class="container-form">
+                <form id="form-add-exercice">
+                    <label for="name">Nombre del Ejercicio</label>
+                    <div class="container-input">
+                        <input type="text" name="name" pattern="^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$"
+                            oninvalid="setCustomValidity('Solo texto y numeros permitido. ')">
+                        <input type="submit" value="Agregar">
+                    </div>
+                </form>
+            </div>
+
+            <div id="container-list-exercices">
+                <h2>Ejercicios</h2>
+                <ul>
+                </ul>
+            </div>
+            <div class="container-form">
+                <form id="form-add-workout">
+                    <label for="name">Nombre del Entrenamiento</label>
+                    <div class="container-input">
+                        <input type="text" name="name" pattern="^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$"
+                            oninvalid="setCustomValidity('Solo texto y numeros permitido. ')">
+                        <input type="submit" value="Agregar">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div id="container-workouts">
+
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #f8f8f8;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+h1#title {
+  font-size: 3rem;
+  margin: 30px 0px;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+button {
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+button:hover {
+  transform: scale(1.5);
+}
+button.delete-button {
+  color: red;
+  font-weight: 700;
+}
+button.delete-button[data-action="workout"] {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+button.add,
+button.sub {
+  color: #ffca57;
+  margin: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+div#container-exercices {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* # FORM */
+form {
+  padding: 10px;
+}
+
+form div.container-input {
+  display: flex;
+  padding: 10px 0;
+}
+
+form div.container-input input {
+  padding: 5px;
+  border: none;
+  outline: 2px solid #f8f8f8;
+  background-color: #000;
+  color: #f8f8f8;
+}
+
+form div.container-input input[type="text"] {
+  width: 75%;
+}
+
+form div.container-input input[type="submit"] {
+  width: 25%;
+}
+
+form div.container-input input[type="submit"]:hover {
+  background-color: #f8f8f8;
+  color: #000;
+}
+/* # END FORM */
+
+div#container-list-exercices {
+  width: 330px;
+}
+div#container-list-exercices h2 {
+  text-align: center;
+}
+div#container-list-exercices ul {
+  margin: 30px 0;
+}
+li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 5px;
+  border: 2px solid #f8f8f8;
+  padding: 10px 0;
+}
+div#container-list-exercices ul li.draggable:hover {
+  cursor: move;
+}
+div.container-workout ul {
+  border: 2px solid #333;
+  min-height: 30px;
+  padding: 5px;
+}
+span.text {
+  font-size: 20px;
+}
+
+div#container-workouts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: min-content;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  margin: 30px;
+}
+div.container-workout {
+  position: relative;
+}
+/* Animations */
+
+@keyframes ElementDelete {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
